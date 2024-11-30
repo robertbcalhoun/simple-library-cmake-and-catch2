@@ -1,5 +1,5 @@
 # simple-library-cmake-and-catch2
-Simple library that uses CMake to build and [Catch2](https://github.com/catchorg/Catch2) to test
+Simple library that uses CMake to build and [Catch2](https://github.com/catchorg/Catch2) to test. I've tried to strip this down to the minimum working example.
 
 To install catch2 on debianish:
 ```
@@ -14,6 +14,9 @@ cmake ..
 cmake --build .
 ./tests -s
 ```
+
+Here we are using `Catch2::Catch2WithMain` to wrap the tests, so `tests/*.cpp`
+contains only test definitions (no `main()` wrapper).
 
 Sample Output:
 --------------

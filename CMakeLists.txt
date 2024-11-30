@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(MyLibrary)
+project(MyLibraryProject)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 11)
@@ -10,12 +10,10 @@ file(GLOB_RECURSE SOURCE_FILES src/*.cpp include/*.h)
 # Alternatively:
 # set(SOURCE_FILES src/MyLibrary.cpp include/MyLibrary.h )
 
-
 # Create the library
 add_library(MyLibrary ${SOURCE_FILES})
 
 # Set the include directories
-#target_include_directories(MyLibrary PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_include_directories(MyLibrary PUBLIC include)
 
 # Add Catch2
