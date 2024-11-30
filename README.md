@@ -15,6 +15,8 @@ cmake --build .
 ./tests -s
 ```
 
+To build a shared library, use `cmake -DSHARED_LIB=1 ..`
+
 Here we are using `Catch2::Catch2WithMain` to wrap the tests, so `tests/*.cpp`
 contains only test definitions (no `main()` wrapper).
 

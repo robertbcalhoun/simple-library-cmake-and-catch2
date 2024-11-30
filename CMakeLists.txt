@@ -11,7 +11,12 @@ file(GLOB_RECURSE SOURCE_FILES src/*.cpp include/*.h)
 # set(SOURCE_FILES src/MyLibrary.cpp include/MyLibrary.h )
 
 # Create the library
-add_library(MyLibrary ${SOURCE_FILES})
+if (SHARED_LIB)
+    add_library(MyLibrary SHARED ${SOURCE_FILES})
+else()
+    add_library(MyLibrary ${SOURCE_FILES})
+endif()
+
 
 # Set the include directories
 target_include_directories(MyLibrary PUBLIC include)
