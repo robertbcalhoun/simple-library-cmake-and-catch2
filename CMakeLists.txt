@@ -17,7 +17,6 @@ else()
     add_library(MyLibrary ${SOURCE_FILES})
 endif()
 
-
 # Set the include directories
 target_include_directories(MyLibrary PUBLIC include)
 
@@ -26,13 +25,10 @@ find_package(Catch2 3 REQUIRED)
 
 # Add test files:
 file(GLOB_RECURSE TEST_FILES tests/*.cpp)
-# Alternatively:
-#set(TEST_FILES tests/test_MyLibrary.cpp )
 
 # Create an executable for running the tests
 add_executable(tests ${TEST_FILES})
 
 # Link the tests with the library and Catch2
 target_link_libraries(tests PRIVATE MyLibrary Catch2::Catch2WithMain)
-
 
