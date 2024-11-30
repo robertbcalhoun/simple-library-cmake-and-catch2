@@ -14,3 +14,32 @@ cmake ..
 cmake --build .
 ./tests -s
 ```
+
+Sample Output:
+--------------
+```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests is a Catch2 v3.4.0 host application.
+Run with -? for options
+
+-------------------------------------------------------------------------------
+Addition
+-------------------------------------------------------------------------------
+simple-library-cmake-and-catch2/tests/test1_MyLibrary.cpp:6
+...............................................................................
+
+simple-library-cmake-and-catch2/tests/test1_MyLibrary.cpp:7: PASSED:
+  REQUIRE( Add(1,0) == 1 )
+with expansion:
+  1 == 1
+
+simple-library-cmake-and-catch2/tests/test1_MyLibrary.cpp:8: PASSED:
+  REQUIRE( Add(1,1) == 2 )
+with expansion:
+  2 == 2
+
+(...)
+
+===============================================================================
+All tests passed (8 assertions in 2 test cases)
+```
